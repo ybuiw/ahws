@@ -2,8 +2,9 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { ConfigProvider, Form, Input, Button, message } from 'antd';
 import Captcha from 'react-captcha-code';
 import './index.css';
+import { AntdTreeNodeAttribute } from 'antd/lib/tree';
 
-export type source = 'username|code' | 'username' | 'mobile'
+export type source = 'username/code' | 'username' | 'mobile'
 
 export interface LoginFace {
   style?: React.CSSProperties,
@@ -22,6 +23,13 @@ export interface LoginFace {
    * source 为 mobile 的时候设置倒计时长
   */
   count?: number,
+  /**
+   * 登陆默认值，只有初始化以及重置时生效
+   * @ username  账号
+   * @ mobile 手机号
+   * @ password 密码
+  */
+  values?: any,
   onLogin?: (values: any) => void,
   onCode?: any,
 }
@@ -86,8 +94,8 @@ const Login = (props: LoginFace) => {
   const [code, setCode] = useState<string>('');
   const [form] = Form.useForm();
 
-  const _source: any = props.source || 'username|code';
-  const _sources = _source.split('|');
+  const _source: any = props.source || 'username/code';
+  const _sources = _source.split('/');
 
   const codeChange = useCallback((captcha: string) => {
     setCode(captcha)
@@ -135,7 +143,7 @@ const Login = (props: LoginFace) => {
             <Form
               form={form}
               size="large"
-              initialValues={{ mobile: 18888888888 }}
+              initialValues={props.values}
               onFinish={props.onLogin}
             >
               {isSource(_sources, 'username') &&

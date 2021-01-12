@@ -22,6 +22,7 @@ const App = () => {
     <Login
       style={{backgroundImage: `url(${bg})`}}
       title={ <img src={log} alt="" /> }
+      values={{ mobile: 18888888888 }}
       source="mobile"
       count={3}
       onCode={getCode}
