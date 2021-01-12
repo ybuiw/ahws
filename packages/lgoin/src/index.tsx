@@ -13,8 +13,8 @@ export interface LoginFace {
   */
   title?: React.ReactNode | string,
   /**
-   * 默认 username | code
-   * @ username | code  账号，密码，验证码
+   * 默认 username/code
+   * @ username/code  账号，密码，验证码
    * @ username 账号，密码
    * @ mobile 手机号，验证码
   */

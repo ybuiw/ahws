@@ -1,6 +1,6 @@
 {
   "name": "@ahws/login",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "AHW LOGIN PAGE",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",

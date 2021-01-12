@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-export declare type source = 'username/code' | 'username' | 'mobile';
+export declare type source = 'username|code' | 'username' | 'mobile';
 export interface LoginFace {
     style?: React.CSSProperties;
     /**
@@ -18,13 +18,6 @@ export interface LoginFace {
      * source 为 mobile 的时候设置倒计时长
     */
     count?: number;
-    /**
-     * 登陆默认值，只有初始化以及重置时生效
-     * @ username  账号
-     * @ mobile 手机号
-     * @ password 密码
-    */
-    values?: any;
     onLogin?: (values: any) => void;
     onCode?: any;
 }

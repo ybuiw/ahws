@@ -1,6 +1,15 @@
-AHW LOGIN PAGE
+react后台登录页封装
 ===
-基于 `antd` 后台登录页面封装。依赖 `react-captcha-code`
+基于 `antd` 后台登录页面封装。依赖 `antd`, `react-captcha-code`。
+支持（账号/密码/验证码、账号/密码、手机号/验证码）三种方式。
+
+### 安装
+
+```bash
+npm install --save @ahws/login react-captcha-code
+```
+
+### 引入
 
 ```jsx
 import Login from '@ahws/login';

@@ -98,9 +98,9 @@ var Login = function Login(props) {
       _Form$useForm2 = (0, _slicedToArray2.default)(_Form$useForm, 1),
       form = _Form$useForm2[0];
 
-  var _source = props.source || 'username/code';
+  var _source = props.source || 'username|code';
 
-  var _sources = _source.split('/');
+  var _sources = _source.split('|');
 
   var codeChange = (0, _react.useCallback)(function (captcha) {
     setCode(captcha);
@@ -158,7 +158,9 @@ var Login = function Login(props) {
   }, /*#__PURE__*/_react.default.createElement(_antd.Form, {
     form: form,
     size: "large",
-    initialValues: props.values,
+    initialValues: {
+      mobile: 18888888888
+    },
     onFinish: props.onLogin
   }, isSource(_sources, 'username') && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_antd.Form.Item, {
     name: "username",
