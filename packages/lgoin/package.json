@@ -1,0 +1,31 @@
+{
+  "name": "@ahw/login",
+  "version": "0.0.1",
+  "description": "AHW LOGIN PAGE",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ybuiw/ahw.git"
+  },
+  "keywords": [
+    "react",
+    "login",
+    "ahw-login",
+    "antd login",
+    "react login"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "uub",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "antd": "^4.10.1",
+    "react-captcha-code": "^1.0.5"
+  }
+}
