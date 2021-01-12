@@ -3,14 +3,14 @@ AHW LOGIN PAGE
 基于 `antd` 后台登陆页面封装。
 
 ```jsx
-import Login from '@ahw/login';
+import Login from '@ahws/login';
 ```
 
 ### 基本用法
 
 <!--DemoStart,bgWhite,codePen,codeSandbox--> 
 ```js
-import Login from '@ahw/login';
+import Login from '@ahws/login';
 
 ReactDOM.render(
   <Login

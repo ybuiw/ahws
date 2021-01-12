@@ -1,17 +1,17 @@
 {
-  "name": "@ahw/login",
+  "name": "@ahws/login",
   "version": "0.0.1",
   "description": "AHW LOGIN PAGE",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ybuiw/ahw.git"
+    "url": "https://github.com/ybuiw/ahws.git"
   },
   "keywords": [
     "react",
     "login",
-    "ahw-login",
+    "ahws-login",
     "antd login",
     "react login"
   ],
