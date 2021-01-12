@@ -83,9 +83,9 @@ var Login = function Login(props) {
       _Form$useForm2 = _slicedToArray(_Form$useForm, 1),
       form = _Form$useForm2[0];
 
-  var _source = props.source || 'username|code';
+  var _source = props.source || 'username/code';
 
-  var _sources = _source.split('|');
+  var _sources = _source.split('/');
 
   var codeChange = useCallback(function (captcha) {
     setCode(captcha);
@@ -143,9 +143,7 @@ var Login = function Login(props) {
   }, /*#__PURE__*/React.createElement(Form, {
     form: form,
     size: "large",
-    initialValues: {
-      mobile: 18888888888
-    },
+    initialValues: props.values,
     onFinish: props.onLogin
   }, isSource(_sources, 'username') && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Form.Item, {
     name: "username",
