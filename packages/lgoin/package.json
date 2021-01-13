@@ -1,7 +1,7 @@
 {
   "name": "@ahws/login",
-  "version": "0.0.3",
-  "description": "AHW LOGIN PAGE",
+  "version": "0.0.4",
+  "description": "ahws login page",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "repository": {
@@ -11,7 +11,7 @@
   "keywords": [
     "react",
     "login",
-    "ahw-login",
+    "ahws-login",
     "antd login",
     "react login"
   ],
@@ -20,12 +20,14 @@
   },
   "author": "uub",
   "license": "MIT",
+  "dependencies": {
+	  "react-captcha-code": "^1.0.5"
+  },
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "antd": "^4.10.1",
-    "react-captcha-code": "^1.0.5"
+    "antd": "^4.10.1"
   }
 }

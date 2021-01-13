@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { ConfigProvider, Form, Input, Button, message } from 'antd';
 import Captcha from 'react-captcha-code';
 import './index.css';
-import { AntdTreeNodeAttribute } from 'antd/lib/tree';
 
 export type source = 'username/code' | 'username' | 'mobile'
 
@@ -211,7 +210,7 @@ const Login = (props: LoginFace) => {
 
 export default Login;
 
-function isSource(arr: any[string], str: string) {
+function isSource(arr: any[], str: string) {
   return arr.includes(str);
 }
 
