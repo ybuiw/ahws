@@ -24,11 +24,11 @@ import bg from 'bg.png';
 import log from 'log.png';
 
 const LoginPage = () => {
-  const onLogin = (value: any) => {
+  const onLogin = v => {
     console.log(v)
   }
 
-  const getCode = (callback: any) => {
+  const getCode = (callback) => {
     // 模拟发送验证码
     setTimeout(() => {
       // 发送成功

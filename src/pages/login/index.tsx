@@ -1,15 +1,14 @@
 import React from 'react';
-import { Login } from './components'
-import './App.css';
+import { Login } from '../../components'
 import bg from './bg.jpg'
 import log from './log.png'
 
 const App = () => {
-  const formhandle = e => {
-    console.log(e)
+  const formhandle = (value: any) => {
+    console.log(value)
   }
 
-  const getCode = (callback) => {
+  const getCode = (callback: any) => {
     console.log(callback)
     setTimeout(() => {
       callback(true, '789')
@@ -24,7 +23,7 @@ const App = () => {
       title={ <img src={log} alt="" /> }
       values={{ mobile: 18888888888 }}
       source="mobile"
-      count={3}
+      count={60}
       onCode={getCode}
       onLogin={formhandle}
     />
