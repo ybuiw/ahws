@@ -12,7 +12,7 @@ npm install --save @ahws/layouts
 ### 引入
 
 ```jsx
-import Login from '@ahws/layouts';
+import Layouts from '@ahws/layouts';
 ```
 
 ### Demo
@@ -20,7 +20,7 @@ import Login from '@ahws/layouts';
 <!--DemoStart,bgWhite,codePen,codeSandbox--> 
 ```js
 import React, { useState } from 'react';
-import Login from '@ahws/layouts';
+import Layouts from '@ahws/layouts';
 import logo from './logo.png';
 
 // 模拟项目路由列表
