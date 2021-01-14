@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './App';
-import App from './pages/login';
+import { HashRouter, Switch } from 'react-router-dom';
+import App from './App';
+// import App from './pages/login';
+//import App from './pages/layouts';
 import 'antd/dist/antd.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-	<App />,
+	<HashRouter>
+		<Switch>
+			<App />
+		</Switch>
+	</HashRouter>,
 	document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function

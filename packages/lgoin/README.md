@@ -68,3 +68,6 @@ export default LoginPage;
 | onLogin | 提交表单且数据验证成功后回调事件 | function(values) | -- |
 
 
+## 效果图
+![calendar](https://github.com/ybuiw/ahws/blob/master/packages/lgoin/1.png)
+![calendar](https://github.com/ybuiw/ahws/blob/master/packages/lgoin/2.png)

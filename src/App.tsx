@@ -1,8 +1,8 @@
-const App = () => {
+import Layouts from './pages/layouts';
+
+const App = (props: any) => {
   return (
-    <>
-      app
-    </>
+    <Layouts {...props} />
   )
 }
 
