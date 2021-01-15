@@ -19,10 +19,10 @@ const router: any = [
     isMenu: true,
     title: '首页',
     icon: 'icon-codepen',
-    path: '/index1',
+    path: '/home',
     routes: [
       {
-        path: '/index',
+        path: '/home/index',
         isMenu: true,
         title: '我是首页',
         icon: 'icon-layout',
@@ -35,17 +35,17 @@ const router: any = [
     isMenu: true,
     title: '页面1',
     icon: 'icon-share',
-    path: '/aa1',
+    path: '/a',
     routes: [
       {
-        path: '/a1',
+        path: '/a/a1',
         isMenu: true,
         title: '页面1-1',
         icon: 'icon-layout',
         component: '页面1-1 page',
       },
       {
-        path: '/a2',
+        path: '/a/a2',
         isMenu: true,
         title: '页面1-2',
         icon: 'icon-layout',
@@ -58,24 +58,24 @@ const router: any = [
     isMenu: true,
     title: '页面2',
     icon: 'icon-control',
-    path: '/bb1',
+    path: '/b',
     routes: [
       {
-        path: '/b1',
+        path: '/b/b1',
         isMenu: true,
         title: '页面2-1',
         icon: 'icon-layout',
         component: '页面1-1 page',
       },
       {
-        path: '/b2',
+        path: '/b/b2',
         isMenu: false,
         title: '页面2-2',
         icon: 'icon-layout',
         component: '页面1-2 page',
       },
       {
-        path: '/b3',
+        path: '/b/b3',
         isMenu: true,
         title: '页面2-3',
         icon: 'icon-layout',

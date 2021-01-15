@@ -10,7 +10,6 @@ const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_2325869_zea4of8xtzk.js',
 })
 
-
 export interface LayoutsFace {
   /**
    * 左上角logo部分，可以是文字， 如果是图片建议高度32px
@@ -97,7 +96,7 @@ const LayoutSider = (props: LayoutsFace) => {
     const s = getOpenKeys(props.router, props.location.pathname);
     setOpenKeys(s);
     setSelectedKeys([props.location.pathname]);
-  }, [props.location?.pathname, props.router])
+  }, [props.location?.pathname])
 
   useEffect(() => {
     const newData: any = []
@@ -111,6 +110,7 @@ const LayoutSider = (props: LayoutsFace) => {
         }
       }
     })
+    console.log(111)
     setMenu(newData)
   }, [props.router])
 

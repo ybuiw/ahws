@@ -6,7 +6,7 @@ react后台登录页封装
 ### 安装
 
 ```bash
-npm install --save @ahws/login react-captcha-code
+npm install --save @ahws/login
 ```
 
 ### 引入

@@ -23,14 +23,9 @@ import React, { useState } from 'react';
 import Layouts from '@ahws/layouts';
 import logo from './logo.png';
 
-// 模拟项目路由列表
+// 菜单列表
 const router: any = [
   {
-    path: '/login',
-    component: 'login page'
-  },
-  {
-    component: 'layout page',
     isMenu: true,
     title: '首页',
     icon: 'icon-codepen',
@@ -40,12 +35,12 @@ const router: any = [
         path: '/index',
         isMenu: true,
         title: '我是首页',
+        icon: 'icon-codepen',
         component: 'index page',
       },
     ]
   },
   {
-    component: 'layout page',
     isMenu: true,
     title: '页面1',
     icon: 'icon-share',
@@ -55,13 +50,11 @@ const router: any = [
         path: '/a1',
         isMenu: true,
         title: '页面1-1',
-        component: '页面1-1 page',
       },
       {
         path: '/a2',
         isMenu: true,
-        title: '页面1-2',
-        component: '页面1-2 page',
+        title: '页面1-2'
       },
     ]
   },
@@ -115,7 +108,7 @@ export default LayoutsPage;
 
 ## Props router
 
-`router` 是用来左侧导航菜单展示，最多支持二级。结构与`react-router-config` 一致。具体实例用法参考上面demo。
+`router` 是用来左侧导航菜单展示，最多支持二级。具体实例用法参考上面demo。
 
 - `path`   必要。页面路由地址，值是唯一的。一级菜单做为key使用，作为menu初始化展开的标记。
 
