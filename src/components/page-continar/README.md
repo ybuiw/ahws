@@ -6,7 +6,7 @@ react后台page 页面封装
 ### 安装
 
 ```bash
-npm install --save @ahws/page
+npm install --save @ahws/page-continar
 ```
 
 ### 引入
@@ -88,13 +88,13 @@ export default Page;
 | 参数 | 说明 | 类型 | 默认值 |
 | -------- | -------- | -------- | -------- |
 | title | 标题 | React.ReactNode | -- |
-| isBack | 是否返回上一页 | Boolean | -- |
+| isBack | 是否显示返回上一页 | Boolean | false |
 | headExtra | 页头右侧自定义内容展示 | React.ReactNode | -- |
 | headTab | 页头Tab列表 | CardTabListType[] | -- |
 | searchDom | 筛选区域内容模块，支持数据配置 | SearchDom[] / React.ReactNode | -- |
 | centerDom | 筛选区域下方位置自定义内容 | React.ReactNode | -- |
 | onHeadTab | 页头Tab列表点击事件 | function(key: string) {} | -- |
-| onCollapsed | 筛选及重置点击事件 | function(values: any[]) {} | -- |
+| onSearch | 筛选及重置点击事件(如果是日期，内部已梳理格式) | function(values: any[]) {} | -- |
 
 
 ## Props headTab[]

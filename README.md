@@ -7,4 +7,8 @@ Basic Example
 
 - [react layout页面封装](https://github.com/ybuiw/ahws/tree/master/packages/layouts)
 
-  基于 antd layout页面封装。依赖 antd, @ant-design/icons。 基础layout页面，包含顶部，左侧，右侧模块。左侧菜单最多支持二级。
+  基础layout页面，包含顶部，左侧，右侧模块。左侧菜单最多支持二级。
+
+  - [react page面封装](https://github.com/ybuiw/ahws/tree/master/packages/page-continar)
+
+  基础列表页封装。上下结构，包含顶部，筛选区域，其他区域，内容区域。
