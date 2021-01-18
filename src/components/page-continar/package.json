@@ -1,0 +1,34 @@
+{
+  "name": "@ahws/page-continar",
+  "version": "0.0.1",
+  "description": "react antd page continar",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ybuiw/ahws.git"
+  },
+  "keywords": [
+    "react",
+    "page-continar",
+    "react page",
+    "ahws-page",
+    "antd page continar",
+    "react page continar"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "uub",
+  "license": "MIT",
+  "dependencies": {
+	  "dayjs": "^1.10.3"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "antd": "^4.10.1"
+  }
+}

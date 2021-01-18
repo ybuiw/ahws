@@ -4,7 +4,7 @@
   "description": "Use an example of TypeScript.",
   "private": true,
   "scripts": {
-    "start": "kkt start",
+    "start": "cross-env PORT=5004 kkt start",
     "build": "kkt build",
     "test": "kkt test --env=jsdom",
     "test:coverage": "kkt test --env=jsdom --coverage",
@@ -28,6 +28,7 @@
     "@ant-design/icons": "^4.3.0",
     "@types/react-router-dom": "^5.1.7",
     "antd": "^4.10.2",
+    "dayjs": "^1.10.3",
     "react": "17.0.1",
     "react-captcha-code": "^1.0.5",
     "react-dom": "17.0.1",

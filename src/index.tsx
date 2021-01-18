@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Switch } from 'react-router-dom';
-import App from './App';
+//import App from './App';
 // import App from './pages/login';
-//import App from './pages/layouts';
+import App from './pages/layouts';
+//import App from './pages/page';
 import 'antd/dist/antd.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';

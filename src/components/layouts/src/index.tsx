@@ -110,7 +110,6 @@ const LayoutSider = (props: LayoutsFace) => {
         }
       }
     })
-    console.log(111)
     setMenu(newData)
   }, [props.router])
 
