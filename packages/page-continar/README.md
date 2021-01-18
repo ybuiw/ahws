@@ -12,7 +12,7 @@ npm install --save @ahws/page-continar
 ### 引入
 
 ```jsx
-import Layouts from '@ahws/page-continar';
+import PageContinar from '@ahws/page-continar';
 ```
 
 ### Demo
