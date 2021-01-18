@@ -94,7 +94,7 @@ export default Page;
 | searchDom | 筛选区域内容模块，支持数据配置 | SearchDom[] / React.ReactNode | -- |
 | centerDom | 筛选区域下方位置自定义内容 | React.ReactNode | -- |
 | onHeadTab | 页头Tab列表点击事件 | function(key: string) {} | -- |
-| onSearch | 筛选及重置点击事件(如果是日期，内部已梳理格式) | function(values: any[]) {} | -- |
+| onSearch | 筛选及重置点击事件(如果是日期，内部已格式化日期) | function(values: any[]) {} | -- |
 
 
 ## Props headTab[]
