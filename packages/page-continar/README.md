@@ -112,11 +112,11 @@ export default Page;
 
 - `name`   字段名。
 
-- `type`  类型。目前支支持 `input`, `select`, `checkbox`, `datePicker`, `rangePicker`。
+- `type`  类型。目前只支持 `input`, `select`, `checkbox`, `datePicker`, `rangePicker`。
 
 - `width`  宽度。
 
-- `child`  选择得数据。type为 `select`, `checkbox` 时配置 `{name: '', value: ''}`。
+- `child`  选择得数据。type为 `select`, `checkbox` 时配置 `[{name: '', value: ''}]`。
 
 
 
