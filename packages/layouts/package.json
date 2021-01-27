@@ -1,6 +1,6 @@
 {
   "name": "@ahws/layouts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "react antd layouts page",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",

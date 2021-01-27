@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import { useHistory } from 'react-router';
 import { Layout, Menu } from 'antd';
 import { MenuFoldOutlined, MenuUnfoldOutlined, createFromIconfontCN } from '@ant-design/icons';
@@ -98,7 +98,7 @@ const LayoutSider = (props: LayoutsFace) => {
     setSelectedKeys([props.location.pathname]);
   }, [props.location?.pathname])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const newData: any = []
     props.router.forEach((item: any) => {
       if (item.isMenu) {
