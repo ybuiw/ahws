@@ -1,6 +1,6 @@
 {
   "name": "@ahws/login",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "react antd login page",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
