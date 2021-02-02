@@ -1,4 +1,5 @@
-const Layout = () => {
+const Layout = (props: any) => {
+  // console.log(props)
   return (
     <>layout</>
   )
