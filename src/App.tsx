@@ -1,8 +1,9 @@
-import Layouts from './pages/layouts';
+// import Layouts from './pages/layouts';
+import BaseLayout from './pages/baseLayout';
 
 const App = (props: any) => {
   return (
-    <Layouts {...props} />
+    <BaseLayout />
   )
 }
 

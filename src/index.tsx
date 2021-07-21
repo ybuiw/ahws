@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import { HashRouter, Switch } from 'react-router-dom';
 //import App from './App';
 // import App from './pages/login';
-import App from './pages/layouts';
+// import App from './pages/layouts';
 //import App from './pages/page';
+import App from './pages/baseLayout';
 
 import { RouterContinar } from './components';
 
