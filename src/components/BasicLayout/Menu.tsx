@@ -28,7 +28,7 @@ const Menus = (props: MenusProps) => {
     >
       {MenuRoutes.map((item: SiderRouterProps, index: number) => {
         if (item.routes) {
-          return <SubMenu key={item.path || index} title={item.name}>
+          return <SubMenu icon={item.icon || null} key={item.path || index} title={item.name}>
             {item.routes?.map((item2: any, index2: number) => {
               if (!item2.isHideMenu) {
                 return <Menu.Item key={item2.path || index2}>{item2.name}</Menu.Item>
@@ -36,7 +36,7 @@ const Menus = (props: MenusProps) => {
             })}
           </SubMenu>
         } else {
-          return <Menu.Item key={item.path || index}>{item.name}</Menu.Item>
+          return <Menu.Item icon={item.icon || null} key={item.path || index}>{item.name}</Menu.Item>
         }
       })}
     </Menu>

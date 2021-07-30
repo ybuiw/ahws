@@ -1,5 +1,8 @@
 
-import BasicLayout, { LayoutProps, SiderRouterProps } from '../../components/BasicLayout';
+import BasicLayout, { SiderRouterProps } from '../../components/BasicLayout';
+import {
+  HomeOutlined
+} from '@ant-design/icons';
 
 const route: SiderRouterProps = {
   routes: [
@@ -14,12 +17,12 @@ const route: SiderRouterProps = {
     {
       path: '/home3',
       name: '管理页',
-      icon: 'home',
+      icon: <HomeOutlined />,
     },
     {
       path: '/home',
       name: '管理页',
-      icon: 'home',
+      icon: <HomeOutlined />,
       routes: [
         {
           path: '/home/1',
@@ -28,24 +31,24 @@ const route: SiderRouterProps = {
         {
           path: '/home/2',
           name: '测试2',
-          icon: 'home',
+          icon: 'CopyOutlined',
         }
       ]
     },
     {
       path: '/list',
       name: '列表页',
-      icon: 'home',
+      icon: <HomeOutlined />,
       routes: [
         {
           path: '/list/1',
           name: '测试1',
-          icon: 'home',
+          icon: 'CopyOutlined',
         },
         {
           path: '/list/2',
           name: '测试2',
-          icon: 'home',
+          icon: 'CopyOutlined',
         }
       ]
     },
@@ -60,7 +63,7 @@ const Base = () => {
         title: "后台管理系统",
         logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg'
       }}
-    ></BasicLayout>
+    >aaaa</BasicLayout>
   )
 }
 

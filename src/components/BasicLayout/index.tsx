@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from 'antd';
 import { RouteComponentProps } from 'react-router-dom';
+import { IconProvider } from '@ant-design/icons';
 import Menus from './Menu';
 import './index.less';
 const { Header, Footer, Sider, Content } = Layout;
@@ -23,7 +24,8 @@ export interface SiderRouterProps {
   /** 是否在menu上隐藏标签 */
   isHideMenu?: boolean;
   redirect?: string;
-  icon?: string;
+  icon?: React.ReactNode;
+  component?: any;
 }
 
 export interface LayoutProps {
