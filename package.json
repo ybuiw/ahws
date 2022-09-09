@@ -1,65 +1,32 @@
 {
-  "name": "@template/typescript",
-  "version": "6.0.12",
-  "description": "Use an example of TypeScript.",
   "private": true,
   "scripts": {
-    "start": "cross-env PORT=5004 kkt start",
-    "build": "kkt build",
-    "test": "kkt test --env=jsdom",
-    "test:coverage": "kkt test --env=jsdom --coverage",
-    "type": "npm run t:cjs && npm run t:esm",
-    "t:esm": "lerna exec --scope @ahws/* -- tsbb types --outDir lib/esm --target ESNEXT",
-    "t:cjs": "lerna exec --scope @ahws/* -- tsbb types --outDir lib/cjs --target ESNEXT",
-    "b:css": "lerna exec --scope @ahws/* -- compile-less -d src -o lib/esm",
-    "b:lib": "lerna exec --scope @ahws/* -- tsbb build --target react",
-    "watch": "lerna exec --scope @ahws/* -- tsbb watch --target react",
-    "b": "npm run b:lib && npm run type && npm run b:css",
-    "clean": "lerna clean",
-    "publish": "npm run b && lerna publish from-package"
+    "build": "lerna exec --scope @ahws/* --ignore @ahws/www -- tsbb build",
+    "⬇️⬇️⬇️⬇️⬇️ package ⬇️⬇️⬇️⬇️⬇️": "▼▼▼▼▼ packages ▼▼▼▼▼",
+    "watch": "lerna exec --scope @ahws/* --ignore @ahws/www -- tsbb watch",
+    "doc": "npm run-script build --workspace @ahws/www",
+    "start": "npm run-script start --workspace @ahws/www",
+    "⬆️⬆️⬆️⬆️⬆️ package ⬆️⬆️⬆️⬆️⬆️": "▲▲▲▲▲ package ▲▲▲▲▲",
+    "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
+    "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,html,less,md,json}'",
+    "remove": "npm run clean && lerna exec \"rm -rf package-lock.json\" --scope react-code-preview-layout --scope website",
+    "hoist": "lerna bootstrap --hoist",
+    "clean": "lerna clean --yes"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kktjs/kkt.git"
+  "engines": {
+    "node": ">=16.0.0"
   },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@ant-design/icons": "^4.6.2",
-    "@types/react-redux": "^7.1.16",
-    "@types/react-router-dom": "^5.1.7",
-    "antd": "^4.10.2",
-    "dayjs": "^1.10.3",
-    "react": "17.0.1",
-    "react-captcha-code": "^1.0.5",
-    "react-dom": "17.0.1",
-    "react-dynamic-loadable": "^2.0.5",
-    "react-loadable": "^5.5.0",
-    "react-redux": "^7.2.2",
-    "react-router-dom": "^5.2.0",
-    "web-vitals": "1.0.1"
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "www"
+    ]
   },
   "devDependencies": {
-    "@kkt/less-modules": "6.0.12",
-    "@types/jest": "24.9.1",
-    "@types/react": "17.0.0",
-    "@types/react-dom": "17.0.0",
-    "@types/react-loadable": "^5.5.4",
-    "compile-less-cli": "^1.6.0",
-    "kkt": "6.0.12",
-    "lerna": "^3.22.1",
-    "tsbb": "^1.7.9"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "lerna": "5.5.0",
+    "prettier": "~2.7.0",
+    "tsbb": "^3.7.7"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "@ahws/www",
+  "version": "0.0.1",
+  "author":"姚宾 <yaob421123@163.com>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "umi": "^4.0.19",
+    "@ahws/pro-search": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^4.1.2"
+  }
+}

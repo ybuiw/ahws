@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "names": [
+    "props",
+    "title"
+  ],
+  "sources": [
+    "../src/index.tsx"
+  ],
+  "sourcesContent": [
+    "import React from 'react';\n\nexport interface ProSearchProps {\n  title?: string;\n}\n\nexport default (props: ProSearchProps) => {\n  const { title } = props;\n\n  return (\n    <div>2233444444, { title }</div>\n  )\n}"
+  ],
+  "mappings": ";;;;;;;;;AAAA;;;;eAMe,kBAACA,KAAD,EAA2B;EACxC,IAAQC,KAAR,GAAkBD,KAAlB,CAAQC,KAAR;EAEA,oBACE;IAAA,2BAAmBA,KAAnB;EAAA,EADF;AAGD,C"
+}
