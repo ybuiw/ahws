@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "build": "lerna exec --scope @ahws/* --ignore @ahws/www -- tsbb build",
+    "build": "lerna exec --scope @ahws/* --ignore @ahws/example -- tsbb build",
     "⬇️⬇️⬇️⬇️⬇️ package ⬇️⬇️⬇️⬇️⬇️": "▼▼▼▼▼ packages ▼▼▼▼▼",
-    "watch": "lerna exec --scope @ahws/* --ignore @ahws/www -- tsbb watch",
-    "doc": "npm run-script build --workspace @ahws/www",
-    "start": "npm run-script start --workspace @ahws/www",
+    "watch": "lerna exec --scope @ahws/* --ignore @ahws/example -- tsbb watch",
+    "doc": "npm run-script build --workspace @ahws/example",
+    "start": "npm run-script start --workspace @ahws/example",
     "⬆️⬆️⬆️⬆️⬆️ package ⬆️⬆️⬆️⬆️⬆️": "▲▲▲▲▲ package ▲▲▲▲▲",
     "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,html,less,md,json}'",
@@ -19,7 +19,7 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "www"
+      "example"
     ]
   },
   "devDependencies": {
