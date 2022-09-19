@@ -1,11 +1,13 @@
 build
 dist
+lib
 cjs
 esm
 node_modules
 coverage
 npm-debug.log*
 package-lock.json
+yarn.lock
 
 .eslintcache
 .DS_Store

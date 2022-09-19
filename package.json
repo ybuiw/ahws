@@ -3,7 +3,8 @@
   "scripts": {
     "build": "lerna exec --scope @ahws/* --ignore @ahws/example -- tsbb build",
     "⬇️⬇️⬇️⬇️⬇️ package ⬇️⬇️⬇️⬇️⬇️": "▼▼▼▼▼ packages ▼▼▼▼▼",
-    "watch": "lerna exec --scope @ahws/* --ignore @ahws/example -- tsbb watch",
+    "watch": "lerna exec --scope @ahws/* --ignore @ahws/example -- tsbb watch & npm run watch:css",
+    "watch:css": "lerna exec --scope @ahws/* --ignore @ahws/example -- compile-less -d src -o esm --watch",
     "doc": "npm run-script build --workspace @ahws/example",
     "start": "npm run-script start --workspace @ahws/example",
     "⬆️⬆️⬆️⬆️⬆️ package ⬆️⬆️⬆️⬆️⬆️": "▲▲▲▲▲ package ▲▲▲▲▲",
@@ -11,6 +12,7 @@
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,html,less,md,json}'",
     "remove": "npm run clean && lerna exec \"rm -rf package-lock.json\" --scope react-code-preview-layout --scope website",
     "hoist": "lerna bootstrap --hoist",
+    "compile-less": "compile-less",
     "clean": "lerna clean --yes"
   },
   "engines": {
@@ -25,6 +27,7 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "compile-less-cli": "~1.8.13",
     "lerna": "5.5.0",
     "prettier": "~2.7.0",
     "tsbb": "^3.7.7"

@@ -1,28 +1,40 @@
-import React from 'react';
-import { Row, Col, Form } from 'antd';
+import { ConfigProvider, Row, Col, Form, Button } from 'antd';
 import ItemsBox from './Items';
 import { ProSearchProps, ProSearchDataSoureProps } from './type';
-import './index.css';
+import { getColSpan } from './utils';
+import './index.less';
 
 const ProSearch = (props: ProSearchProps) => {
   const {
     dataSource,
-    gutter = 10
+    gutter = 15
   } = props;
-  console.log(111)
+  
+  const onFinish = (values: object) => {
+    console.log('values==>', values)
+  }
 
   return (
-    <div className='w--pro-search'>
-      <Form>
-        <Row gutter={gutter}>
-        {dataSource.map((item: ProSearchDataSoureProps, index: number) => (
-          <Col key={index}>
-            <ItemsBox  />
-          </Col>
-        ))}
-        </Row>
-      </Form>
-    </div>
+    <ConfigProvider input={{ autoComplete: 'off' }}>
+      <div className='w--pro-search'>
+        <Form onFinish={onFinish}>
+          <Row gutter={gutter} className='rows'>
+            {dataSource.map((item: ProSearchDataSoureProps, index: number) => {
+              return (
+                <Col key={index} className="cell" {...getColSpan(item.full)}>
+                  {ItemsBox(item)}
+                </Col>
+              )
+            })}
+            <Col className='w--pro-search-btns'>
+              <Button type="primary" htmlType="submit">
+                Submit
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+      </div>
+    </ConfigProvider>
   )
 }
 

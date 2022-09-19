@@ -1,3 +1,3 @@
-/// <reference types="react" />
-declare const Items: () => JSX.Element;
+import { ProSearchDataSoureProps } from './type';
+declare const Items: (props: ProSearchDataSoureProps) => JSX.Element;
 export default Items;

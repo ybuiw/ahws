@@ -5,7 +5,7 @@
     "../src/type.ts"
   ],
   "sourcesContent": [
-    "export type dataSoureType = 'input' | 'select' | 'date' | 'radio' | 'checkbox' | 'render'\n\nexport interface ProSearchProps {\n  dataSource: ProSearchDataSoureProps[];\n  filter?: object;\n  gutter?: number;\n  onChange?: (parmas: object) => void;\n}\n\nexport interface ProSearchDataSoureProps {\n  type: dataSoureType;\n  key: string;\n  label?: string;\n}\n"
+    "export type dataSoureType = 'input' | 'select' | 'date' | 'radio' | 'checkbox' | 'render'\n\nexport interface ProSearchProps {\n  dataSource: ProSearchDataSoureProps[];\n  span?: number;\n  filter?: object;\n  gutter?: number;\n  onChange?: (parmas: object) => void;\n}\n\nexport interface ProSearchDataSoureProps {\n  type: dataSoureType;\n  key: string;\n  label?: string;\n  full?: number | boolean;\n}\n"
   ],
   "mappings": ""
 }

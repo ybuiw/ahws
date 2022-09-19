@@ -5,17 +5,23 @@
     "props",
     "dataSource",
     "gutter",
+    "onFinish",
+    "values",
     "console",
     "log",
+    "autoComplete",
     "map",
     "item",
-    "index"
+    "index",
+    "getColSpan",
+    "full",
+    "ItemsBox"
   ],
   "sources": [
     "../src/index.tsx"
   ],
   "sourcesContent": [
-    "import React from 'react';\nimport { Row, Col, Form } from 'antd';\nimport ItemsBox from './Items';\nimport { ProSearchProps, ProSearchDataSoureProps } from './type';\nimport './index.css';\n\nconst ProSearch = (props: ProSearchProps) => {\n  const {\n    dataSource,\n    gutter = 10\n  } = props;\n  console.log(111)\n\n  return (\n    <div className='w--pro-search'>\n      <Form>\n        <Row gutter={gutter}>\n        {dataSource.map((item: ProSearchDataSoureProps, index: number) => (\n          <Col key={index}>\n            <ItemsBox  />\n          </Col>\n        ))}\n        </Row>\n      </Form>\n    </div>\n  )\n}\n\nexport type { ProSearchProps, ProSearchDataSoureProps };\n\nexport default ProSearch;"
+    "import { ConfigProvider, Row, Col, Form, Button } from 'antd';\nimport ItemsBox from './Items';\nimport { ProSearchProps, ProSearchDataSoureProps } from './type';\nimport { getColSpan } from './utils';\nimport './index.less';\n\nconst ProSearch = (props: ProSearchProps) => {\n  const {\n    dataSource,\n    gutter = 15\n  } = props;\n  \n  const onFinish = (values: object) => {\n    console.log('values==>', values)\n  }\n\n  return (\n    <ConfigProvider input={{ autoComplete: 'off' }}>\n      <div className='w--pro-search'>\n        <Form onFinish={onFinish}>\n          <Row gutter={gutter} className='rows'>\n            {dataSource.map((item: ProSearchDataSoureProps, index: number) => {\n              return (\n                <Col key={index} className=\"cell\" {...getColSpan(item.full)}>\n                  {ItemsBox(item)}\n                </Col>\n              )\n            })}\n            <Col className='w--pro-search-btns'>\n              <Button type=\"primary\" htmlType=\"submit\">\n                Submit\n              </Button>\n            </Col>\n          </Row>\n        </Form>\n      </div>\n    </ConfigProvider>\n  )\n}\n\nexport type { ProSearchProps, ProSearchDataSoureProps };\n\nexport default ProSearch;"
   ],
-  "mappings": ";;;;;;;;;AAAA;;AACA;;AACA;;;;AAIA,IAAMA,SAAS,GAAG,SAAZA,SAAY,CAACC,KAAD,EAA2B;EAC3C,IACEC,UADF,GAGID,KAHJ,CACEC,UADF;EAAA,oBAGID,KAHJ,CAEEE,MAFF;EAAA,IAEEA,MAFF,8BAEW,EAFX;EAIAC,OAAO,CAACC,GAAR,CAAY,GAAZ;EAEA,oBACE;IAAK,SAAS,EAAC,eAAf;IAAA,uBACE,qBAAC,UAAD;MAAA,uBACE,qBAAC,SAAD;QAAK,MAAM,EAAEF,MAAb;QAAA,UACCD,UAAU,CAACI,GAAX,CAAe,UAACC,IAAD,EAAgCC,KAAhC;UAAA,oBACd,qBAAC,SAAD;YAAA,uBACE,qBAAC,iBAAD;UADF,GAAUA,KAAV,CADc;QAAA,CAAf;MADD;IADF;EADF,EADF;AAaD,CApBD;;eAwBeR,S"
+  "mappings": ";;;;;;;;;;;AAAA;;AACA;;AAEA;;;;AAGA,IAAMA,SAAS,GAAG,SAAZA,SAAY,CAACC,KAAD,EAA2B;EAC3C,IACEC,UADF,GAGID,KAHJ,CACEC,UADF;EAAA,oBAGID,KAHJ,CAEEE,MAFF;EAAA,IAEEA,MAFF,8BAEW,EAFX;;EAKA,IAAMC,QAAQ,GAAG,SAAXA,QAAW,CAACC,MAAD,EAAoB;IACnCC,OAAO,CAACC,GAAR,CAAY,WAAZ,EAAyBF,MAAzB;EACD,CAFD;;EAIA,oBACE,qBAAC,oBAAD;IAAgB,KAAK,EAAE;MAAEG,YAAY,EAAE;IAAhB,CAAvB;IAAA,uBACE;MAAK,SAAS,EAAC,eAAf;MAAA,uBACE,qBAAC,UAAD;QAAM,QAAQ,EAAEJ,QAAhB;QAAA,uBACE,sBAAC,SAAD;UAAK,MAAM,EAAED,MAAb;UAAqB,SAAS,EAAC,MAA/B;UAAA,WACGD,UAAU,CAACO,GAAX,CAAe,UAACC,IAAD,EAAgCC,KAAhC,EAAkD;YAChE,oBACE,qBAAC,SAAD;cAAiB,SAAS,EAAC;YAA3B,GAAsC,IAAAC,iBAAA,EAAWF,IAAI,CAACG,IAAhB,CAAtC;cAAA,UACG,IAAAC,iBAAA,EAASJ,IAAT;YADH,IAAUC,KAAV,CADF;UAKD,CANA,CADH,eAQE,qBAAC,SAAD;YAAK,SAAS,EAAC,oBAAf;YAAA,uBACE,qBAAC,YAAD;cAAQ,IAAI,EAAC,SAAb;cAAuB,QAAQ,EAAC,QAAhC;cAAA;YAAA;UADF,EARF;QAAA;MADF;IADF;EADF,EADF;AAsBD,CAhCD;;eAoCeX,S"
 }

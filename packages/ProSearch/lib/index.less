@@ -1,0 +1,43 @@
+@name:~ "w--pro-search";
+
+.@{name} {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  padding-bottom: 5px;
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  &-items {
+    width: 100%;
+    .label {
+      line-height: 22px;
+      margin-bottom: 4px;
+    }
+    .ant-form-item {
+      margin-bottom: 15px;
+    }
+    .ant-form-item-explain {
+      height: 15px;
+      line-height: 15px;
+    }
+  }
+  .rows {
+    display: block;
+  }
+  .cell {
+    float: left;
+    width: 100%;
+    display: inline-block;
+  }
+  &-btns {
+    padding-top: 28px;
+    padding-bottom: 15px;
+    float: right;
+  }
+}

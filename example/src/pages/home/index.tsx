@@ -1,6 +1,10 @@
+import Ceshi from '../ceshi'
+
 const Page = () => {
   return (
-    <div>home</div>
+    <div>
+      <Ceshi />
+    </div>
   )
 }
 

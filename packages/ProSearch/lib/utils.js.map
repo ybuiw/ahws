@@ -1,0 +1,19 @@
+{
+  "version": 3,
+  "names": [
+    "getColSpan",
+    "span",
+    "xs",
+    "sm",
+    "md",
+    "lg",
+    "xl"
+  ],
+  "sources": [
+    "../src/utils.ts"
+  ],
+  "sourcesContent": [
+    "/**\n * 设置 col 栅格布局\n * @span\n*/\nexport const getColSpan = (span: number | boolean = 1) => {\n  if (typeof span === 'boolean') {\n    return {\n      xs: { span: 24 },\n      sm: { span: 24 },\n      md: { span: 24 },\n      lg: { span: 24 },\n      xl: { span: 24 },\n    }\n  }\n  if (span > 1) {\n    return {\n      xs: { span: 24 },\n      sm: { span: 24 },\n      md: { span: 12 },\n      lg: { span: span === 2 ? 8 * span : 8 * (span - 1) },\n      xl: { span: 6 * span },\n    }\n  }\n  return {\n    xs: { span: 24 },\n    sm: { span: 24 },\n    md: { span: 12 },\n    lg: { span: 8 },\n    xl: { span: 6 },\n  };\n}"
+  ],
+  "mappings": ";;;;;;;AAAA;AACA;AACA;AACA;AACO,IAAMA,UAAU,GAAG,SAAbA,UAAa,GAAgC;EAAA,IAA/BC,IAA+B,uEAAN,CAAM;;EACxD,IAAI,OAAOA,IAAP,KAAgB,SAApB,EAA+B;IAC7B,OAAO;MACLC,EAAE,EAAE;QAAED,IAAI,EAAE;MAAR,CADC;MAELE,EAAE,EAAE;QAAEF,IAAI,EAAE;MAAR,CAFC;MAGLG,EAAE,EAAE;QAAEH,IAAI,EAAE;MAAR,CAHC;MAILI,EAAE,EAAE;QAAEJ,IAAI,EAAE;MAAR,CAJC;MAKLK,EAAE,EAAE;QAAEL,IAAI,EAAE;MAAR;IALC,CAAP;EAOD;;EACD,IAAIA,IAAI,GAAG,CAAX,EAAc;IACZ,OAAO;MACLC,EAAE,EAAE;QAAED,IAAI,EAAE;MAAR,CADC;MAELE,EAAE,EAAE;QAAEF,IAAI,EAAE;MAAR,CAFC;MAGLG,EAAE,EAAE;QAAEH,IAAI,EAAE;MAAR,CAHC;MAILI,EAAE,EAAE;QAAEJ,IAAI,EAAEA,IAAI,KAAK,CAAT,GAAa,IAAIA,IAAjB,GAAwB,KAAKA,IAAI,GAAG,CAAZ;MAAhC,CAJC;MAKLK,EAAE,EAAE;QAAEL,IAAI,EAAE,IAAIA;MAAZ;IALC,CAAP;EAOD;;EACD,OAAO;IACLC,EAAE,EAAE;MAAED,IAAI,EAAE;IAAR,CADC;IAELE,EAAE,EAAE;MAAEF,IAAI,EAAE;IAAR,CAFC;IAGLG,EAAE,EAAE;MAAEH,IAAI,EAAE;IAAR,CAHC;IAILI,EAAE,EAAE;MAAEJ,IAAI,EAAE;IAAR,CAJC;IAKLK,EAAE,EAAE;MAAEL,IAAI,EAAE;IAAR;EALC,CAAP;AAOD,CA1BM"
+}

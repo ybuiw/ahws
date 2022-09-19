@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "names": [
+    "props",
+    "type",
+    "label"
+  ],
+  "sources": [
+    "../src/render.tsx"
+  ],
+  "sourcesContent": [
+    "import { Fragment } from 'react';\nimport { Input } from 'antd';\nimport { ProSearchDataSoureProps } from './type';\n\nexport default (props: ProSearchDataSoureProps) => {\n  const { type, label = '' } = props;\n  if (type === 'input') {\n    return <Input placeholder={`请输入${label}`} allowClear  />\n  }\n  return <Fragment />\n}"
+  ],
+  "mappings": ";;;;;;;AAAA;;AACA;;;;eAGe,kBAACA,KAAD,EAAoC;EACjD,IAAQC,IAAR,GAA6BD,KAA7B,CAAQC,IAAR;EAAA,mBAA6BD,KAA7B,CAAcE,KAAd;EAAA,IAAcA,KAAd,6BAAsB,EAAtB;;EACA,IAAID,IAAI,KAAK,OAAb,EAAsB;IACpB,oBAAO,qBAAC,WAAD;MAAO,WAAW,8BAAQC,KAAR,CAAlB;MAAmC,UAAU;IAA7C,EAAP;EACD;;EACD,oBAAO,qBAAC,eAAD,KAAP;AACD,C"
+}

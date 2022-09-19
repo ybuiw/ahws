@@ -1,0 +1,41 @@
+.w--pro-search {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  padding-bottom: 0;
+}
+.w--pro-search::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.w--pro-search-items {
+  width: 100%;
+}
+.w--pro-search-items .label {
+  line-height: 22px;
+  margin-bottom: 4px;
+}
+.w--pro-search-items .ant-form-item {
+  margin-bottom: 15px;
+}
+.w--pro-search-items .ant-form-item-explain {
+  height: 15px;
+  line-height: 15px;
+}
+.w--pro-search .rows {
+  display: block;
+}
+.w--pro-search .cell {
+  float: left;
+  width: 100%;
+  display: inline-block;
+}
+.w--pro-search-btns {
+  padding-top: 28px;
+  padding-bottom: 20px;
+  float: right;
+}
