@@ -2,46 +2,27 @@ import ProSearch, { ProSearchDataSoureProps } from '@ahws/pro-search'
 
 const items: ProSearchDataSoureProps[] = [
   {
-    type: 'input',
+    type: 'Input',
     key: 'name',
-    label: '姓名'
+    label: '姓名',
+    attrs: {
+      maxLength: 10
+    }
   },
   {
-    type: 'input',
+    type: 'Select',
     key: 'addr',
     label: '地址',
-    full: 2
-  },
-  {
-    type: 'input',
-    key: 'name3',
-    label: '姓名'
-  },
-  {
-    type: 'input',
-    key: 'addr4',
-    label: '地址'
-  },
-  {
-    type: 'input',
-    key: 'name5',
-    label: '姓名'
-  },
-  {
-    type: 'input',
-    key: 'addr6',
-    label: '地址'
-  },
-  {
-    type: 'input',
-    key: 'name7',
-    label: '姓名'
-  },
-  {
-    type: 'input',
-    key: 'addr8',
-    label: '地址'
-  },
+    attrs: {
+      options: [
+        { label: 'Jack1', value: 1 },
+        { label: 'Jack2', value: 2 }
+      ],
+      mode: 'multiple',
+      maxLength: 10,
+      allowClear: false
+    }
+  }
 ]
 
 const Page = () => {

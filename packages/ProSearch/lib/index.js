@@ -5,6 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var _exportNames = {};
 exports["default"] = void 0;
 
 var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread2"));
@@ -12,6 +13,20 @@ var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/obje
 var _antd = require("antd");
 
 var _Items = _interopRequireDefault(require("./Items"));
+
+var _type = require("./type");
+
+Object.keys(_type).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _type[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _type[key];
+    }
+  });
+});
 
 var _utils = require("./utils");
 
@@ -59,5 +74,4 @@ var ProSearch = function ProSearch(props) {
 
 var _default = ProSearch;
 exports["default"] = _default;
-module.exports = exports.default;
 //# sourceMappingURL=index.js.map

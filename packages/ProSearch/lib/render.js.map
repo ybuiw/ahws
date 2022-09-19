@@ -3,13 +3,14 @@
   "names": [
     "props",
     "type",
-    "label"
+    "label",
+    "attrs"
   ],
   "sources": [
     "../src/render.tsx"
   ],
   "sourcesContent": [
-    "import { Fragment } from 'react';\nimport { Input } from 'antd';\nimport { ProSearchDataSoureProps } from './type';\n\nexport default (props: ProSearchDataSoureProps) => {\n  const { type, label = '' } = props;\n  if (type === 'input') {\n    return <Input placeholder={`请输入${label}`} allowClear  />\n  }\n  return <Fragment />\n}"
+    "import { Fragment } from 'react';\nimport { Input, Select } from 'antd';\nimport { ProSearchDataSoureProps } from './type';\n\nexport default (props: ProSearchDataSoureProps) => {\n  const { type, label = '', attrs } = props;\n  if (type === 'Input') {\n    return <Input placeholder={`请输入${label}`} allowClear {...attrs} />\n  }\n  if (type === 'Select') {\n    return <Select placeholder={`请选择${label}`} allowClear {...attrs} />\n  }\n  return <Fragment />\n}"
   ],
-  "mappings": ";;;;;;;AAAA;;AACA;;;;eAGe,kBAACA,KAAD,EAAoC;EACjD,IAAQC,IAAR,GAA6BD,KAA7B,CAAQC,IAAR;EAAA,mBAA6BD,KAA7B,CAAcE,KAAd;EAAA,IAAcA,KAAd,6BAAsB,EAAtB;;EACA,IAAID,IAAI,KAAK,OAAb,EAAsB;IACpB,oBAAO,qBAAC,WAAD;MAAO,WAAW,8BAAQC,KAAR,CAAlB;MAAmC,UAAU;IAA7C,EAAP;EACD;;EACD,oBAAO,qBAAC,eAAD,KAAP;AACD,C"
+  "mappings": ";;;;;;;;;;;AAAA;;AACA;;;;eAGe,kBAACA,KAAD,EAAoC;EACjD,IAAQC,IAAR,GAAoCD,KAApC,CAAQC,IAAR;EAAA,mBAAoCD,KAApC,CAAcE,KAAd;EAAA,IAAcA,KAAd,6BAAsB,EAAtB;EAAA,IAA0BC,KAA1B,GAAoCH,KAApC,CAA0BG,KAA1B;;EACA,IAAIF,IAAI,KAAK,OAAb,EAAsB;IACpB,oBAAO,qBAAC,WAAD;MAAO,WAAW,8BAAQC,KAAR,CAAlB;MAAmC,UAAU;IAA7C,GAAkDC,KAAlD,EAAP;EACD;;EACD,IAAIF,IAAI,KAAK,QAAb,EAAuB;IACrB,oBAAO,qBAAC,YAAD;MAAQ,WAAW,8BAAQC,KAAR,CAAnB;MAAoC,UAAU;IAA9C,GAAmDC,KAAnD,EAAP;EACD;;EACD,oBAAO,qBAAC,eAAD,KAAP;AACD,C"
 }

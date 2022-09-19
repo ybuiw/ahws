@@ -1,16 +1,19 @@
-export type dataSoureType = 'input' | 'select' | 'date' | 'radio' | 'checkbox' | 'render'
+import { InputProps, SelectProps } from 'antd';
 
+interface IItemGeneric<T, U> {
+  type: T;
+  key: string;
+  label?: string;
+  full?: number | boolean;
+  attrs?: Omit<U, 'value'>;
+}
 export interface ProSearchProps {
   dataSource: ProSearchDataSoureProps[];
-  span?: number;
   filter?: object;
   gutter?: number;
   onChange?: (parmas: object) => void;
 }
 
-export interface ProSearchDataSoureProps {
-  type: dataSoureType;
-  key: string;
-  label?: string;
-  full?: number | boolean;
-}
+export type ProSearchDataSoureProps =
+  IItemGeneric<'Input', InputProps> |
+  IItemGeneric<'Select', SelectProps>
