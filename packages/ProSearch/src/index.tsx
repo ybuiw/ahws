@@ -1,9 +1,9 @@
 import { ConfigProvider, Row, Col, Form, Button } from 'antd';
 import ItemsBox from './Items';
 import { ProSearchProps, ProSearchDataSoureProps } from './type';
-export * from './type';
 import { getColSpan } from './utils';
 import './index.less';
+export * from './type';
 
 const ProSearch = (props: ProSearchProps) => {
   const {
@@ -38,7 +38,5 @@ const ProSearch = (props: ProSearchProps) => {
     </ConfigProvider>
   )
 }
-
-export type { ProSearchProps, ProSearchDataSoureProps };
 
 export default ProSearch;

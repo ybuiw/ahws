@@ -1,16 +1,10 @@
-Affix 图钉
+ProSearch 搜索
 ===
 
-[![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-affix/file/README.md)
-[![NPM Downloads](https://img.shields.io/npm/dm/@uiw/react-affix.svg?style=flat)](https://www.npmjs.com/package/@uiw/react-affix)
-[![npm version](https://img.shields.io/npm/v/@uiw/react-affix.svg?label=@uiw/react-affix)](https://npmjs.com/@uiw/react-affix)
-
-使用图钉，可以将内容固定在屏幕可视范围，并且不随页面的滚动而滚动，常用于菜单等。
+二次封装`From`表单， 组件排版使用`antd`的栅格布局。
 
 ```jsx
-import { Affix } from 'uiw';
-// or
-import Affix from '@uiw/react-affix';
+import ProSearch from '@ahws/pro-search';
 ```
 
 ### 基本用法
@@ -18,31 +12,33 @@ import Affix from '@uiw/react-affix';
 <!--rehype:bgWhite=true&codeSandbox=true&codePen=true-->
 ```jsx
 import ReactDOM from 'react-dom';
-import { Affix, Button } from 'uiw';
+import ProSearch from '@ahws/pro-search';
 
 ReactDOM.render(
-  <Affix offsetTop={60}>
-    <Button type="primary">1 当按钮距离顶部距离为 0，按钮被钉在顶部</Button>
-  </Affix>,
-  _mount_
-);
-```
-
-### 钉在底部
-
-这个实例需要你缩小窗口高度，就可以测试看效果啦。
-
-<!--rehype:bgWhite=true&codeSandbox=true&codePen=true-->
-```jsx
-import ReactDOM from 'react-dom';
-import { Affix, Button } from 'uiw';
-
-ReactDOM.render(
-  <Affix offsetBottom={10} onChange={(affixed) => {
-    console.log('affixed::', affixed);
-  }}>
-    <Button type="primary" style={{ marginLeft: 20 }}>2 当按钮距离底部距离为 0，按钮被钉在底部</Button>
-  </Affix>,
+  <ProSearch
+    dataSource={[
+      {
+        type: 'Input',
+        key: 'name',
+        label: '姓名',
+        attrs: {
+          maxLength: 10,
+          onChange: (e) => console.log(e)
+        }
+      },
+      {
+        type: 'Select',
+        key: 'age',
+        label: '性别',
+        attrs: {
+          options: [
+            { label: '男', value: 1 },
+            { label: '女', value: 2 }
+          ]
+        }
+      }
+    ]}
+  />,
   _mount_
 );
 ```
@@ -51,6 +47,19 @@ ReactDOM.render(
 
 | 参数 | 说明 | 类型 | 默认值 |
 |--------- |-------- |--------- |-------- |
-| offsetBottom | 	距离窗口底部达到指定偏移量后触发 | Number| - |
-| offsetTop | 	距离窗口顶部达到指定偏移量后触发 | Number| - |
-| onChange | 		固定状态改变时触发的回调函数 | Function(affixed) | - |
+| filter |  表单值  | `object` | `{}` |
+| gutter | 表单数据间距  | `number` | `15` |
+| dataSource | 	必填。表单数据配置 | `ProSearchDataSoureProps[]` | - |
+| onChange | 	表单内容变化时的回调 | `(filter: object) => void` | - |
+
+
+### ProSearchDataSoureProps
+
+| 参数 | 说明 | 类型 | 默认值 |
+|--------- |-------- |--------- |-------- |
+| label |  表单文本  | `string` | - |
+| key |  必填。传到后台的 key(filter 里定义的字段)  | `string` | - |
+| type | 必填。表单类型  | `Input` `Select` | - |
+| full |  表单是否占据一整行，数字则表示占位数  | `boolean` `number` | - |
+| attrs | 额外参数，根据`type`类型传递对应的类型参数。参数兼容`antd`对应的api  | `object` | - |
+

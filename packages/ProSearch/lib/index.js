@@ -14,6 +14,10 @@ var _antd = require("antd");
 
 var _Items = _interopRequireDefault(require("./Items"));
 
+var _utils = require("./utils");
+
+var _jsxRuntime = require("react/jsx-runtime");
+
 var _type = require("./type");
 
 Object.keys(_type).forEach(function (key) {
@@ -27,10 +31,6 @@ Object.keys(_type).forEach(function (key) {
     }
   });
 });
-
-var _utils = require("./utils");
-
-var _jsxRuntime = require("react/jsx-runtime");
 
 var ProSearch = function ProSearch(props) {
   var dataSource = props.dataSource,

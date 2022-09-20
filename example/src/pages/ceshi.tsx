@@ -6,7 +6,10 @@ const items: ProSearchDataSoureProps[] = [
     key: 'name',
     label: '姓名',
     attrs: {
-      maxLength: 10
+      maxLength: 10,
+      onChange: (v: any) => {
+        console.log(111, v)
+      }
     }
   },
   {
