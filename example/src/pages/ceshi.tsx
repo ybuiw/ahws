@@ -1,4 +1,5 @@
-import ProSearch, { ProSearchDataSoureProps } from '@ahws/pro-search'
+import ProSearch, { ProSearchDataSoureProps } from '@ahws/pro-search';
+import ProButton, { ProButtonOptionsProps } from '@ahws/pro-button';
 
 const items: ProSearchDataSoureProps[] = [
   {
@@ -28,10 +29,16 @@ const items: ProSearchDataSoureProps[] = [
   }
 ]
 
+const btns: ProButtonOptionsProps[] = [
+  { label: '提交', type: 'primary', className: 'aaa' },
+  { label: '重置' },
+]
+
 const Page = () => {
   return (
     <div>
       <ProSearch dataSource={items} />
+      <ProButton options={btns} />
     </div>
   )
 }

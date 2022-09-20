@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { ProSearchProps } from './type';
 import './index.less';
 export * from './type';

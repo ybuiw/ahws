@@ -1,0 +1,29 @@
+{
+  "name": "@ahws/pro-button",
+  "version": "0.0.1",
+  "description": "antd proButton component",
+  "author":"yaob421123 <yaob421123@163.com>",
+  "homepage": "https://uiwjs.github.io/#/components/affix",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uiwjs/uiw.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "dist.css",
+    "lib",
+    "esm",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
+    "antd": "^4.23.1"
+  }
+}
